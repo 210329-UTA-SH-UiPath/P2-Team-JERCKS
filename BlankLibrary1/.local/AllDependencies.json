@@ -1602,11 +1602,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "UiPathP2",
-      "projectName": "UiPathP2",
-      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\.local",
+      "projectUniqueName": "BlankLibrary1",
+      "projectName": "BlankLibrary1",
+      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\BlankLibrary1\\.local",
       "packagesPath": "C:\\Users\\kissi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\.local"
+      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\BlankLibrary1\\.local"
     },
     "frameworks": {
       "net461": {
