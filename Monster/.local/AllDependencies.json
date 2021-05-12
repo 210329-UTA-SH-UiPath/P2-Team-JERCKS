@@ -878,6 +878,7 @@
       "path": "csvhelper/2.13.5",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "csvhelper.2.13.5.nupkg.sha512",
         "csvhelper.nuspec",
         "lib/net20/CsvHelper.dll",
@@ -1602,11 +1603,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "UiPathP2",
-      "projectName": "UiPathP2",
-      "projectPath": "B:\\Employment\\Revature\\Training\\projects\\Project2\\.local",
+      "projectUniqueName": "Monster",
+      "projectName": "Monster",
+      "projectPath": "B:\\Employment\\Revature\\Training\\projects\\Project2\\Monster\\.local",
       "packagesPath": "C:\\Users\\SpikeSpiegel\\.nuget\\packages\\",
-      "outputPath": "B:\\Employment\\Revature\\Training\\projects\\Project2\\.local"
+      "outputPath": "B:\\Employment\\Revature\\Training\\projects\\Project2\\Monster\\.local"
     },
     "frameworks": {
       "net461": {
