@@ -1602,11 +1602,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "BlankLibrary1",
-      "projectName": "BlankLibrary1",
-      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\BlankLibrary1\\.local",
+      "projectUniqueName": "IndeedLogin",
+      "projectName": "IndeedLogin",
+      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\IndeedLogin\\.local",
       "packagesPath": "C:\\Users\\kissi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\BlankLibrary1\\.local"
+      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\IndeedLogin\\.local"
     },
     "frameworks": {
       "net461": {
