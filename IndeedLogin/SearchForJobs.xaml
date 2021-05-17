@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SearchForJobs" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662.666666666667,2422" sap2010:WorkflowViewState.IdRef="SearchForJobs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchForJobs" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662.666666666667,2160.66666666667" sap2010:WorkflowViewState.IdRef="SearchForJobs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="42">
+    <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -23,10 +23,11 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.CV</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -43,45 +44,41 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchForJobs" sap:VirtualizedContainerService.HintSize="642.666666666667,2322" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SearchForJobs" sap:VirtualizedContainerService.HintSize="642.666666666667,2060.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="keywords" />
       <Variable x:TypeArguments="x:String" Name="skills" />
       <Variable x:TypeArguments="ui:GenericValue" Name="jobInfo" />
       <Variable x:TypeArguments="sd:Rectangle" Name="position" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="jobs" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of string)]" Name="jobUrlList" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of string)]" Name="jobPayList" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of string)]" Name="jobTitleList" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of string)]" Name="companyNameList" />
+      <Variable x:TypeArguments="x:Boolean" Name="homeSearchButton" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="600.666666666667,304.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_2">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  text-input-what'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[keywords]">
-            <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1ffa0f367302bfb8a3e72c066eeaa6bd" Selector="&lt;html app='chrome.exe' title='Job Search | Indeed' /&gt;&lt;webctrl id='text-input-what' tag='INPUT' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:TypeInto.Target>
-          </ui:TypeInto>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  fj'" sap:VirtualizedContainerService.HintSize="600.666666666667,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  text-input-what'" sap:VirtualizedContainerService.HintSize="600.666666666667,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[keywords]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1ffa0f367302bfb8a3e72c066eeaa6bd" Selector="&lt;html app='chrome.exe' omit:title='Job Search | Indeed' /&gt;&lt;webctrl id='text-input-what' tag='INPUT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Home Search Button" sap:VirtualizedContainerService.HintSize="600.666666666667,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -93,7 +90,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="01017328cf0109dbebadcd3ab6f4ace3" Selector="&lt;html app='chrome.exe' omit:title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl id='fj' tag='INPUT' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f7f3df0796110e279f65d81f10407fc2" Selector="&lt;html app='chrome.exe' omit:title='Job Search | Indeed' /&gt;&lt;webctrl tag='BUTTON' type='submit' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -121,13 +118,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FindChildren>
-    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="600.666666666667,1593.33333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[jobs]">
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="600.666666666667,1502.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[jobs]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:UiElement">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="564,1454.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Check for wage displayed in Listing" sap:VirtualizedContainerService.HintSize="564,1364" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:GenericValue" Name="ResultData" />
             </Sequence.Variables>
@@ -151,26 +148,21 @@
                 </ui:Target>
               </ui:GetAttribute.Target>
             </ui:GetAttribute>
-            <If Condition="[ResultData.Contains(&quot;an hour&quot;) or ResultData.Contains(&quot;a year&quot;)]" sap:VirtualizedContainerService.HintSize="522,1226.66666666667" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[ResultData.Contains(&quot;an hour&quot;) or ResultData.Contains(&quot;a year&quot;)]" sap:VirtualizedContainerService.HintSize="522,1136" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,1072.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,982" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="jobUrl" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="jobDescription" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="jobPay" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="jobInfoText" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="jobTitle" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="wage" />
-                    <Variable x:TypeArguments="ui:GenericValue" Name="hourly" />
-                    <Variable x:TypeArguments="s:String[]" Name="wageSplit" />
-                    <Variable x:TypeArguments="x:Int32" Default="0" Name="counter" />
+                    <Variable x:TypeArguments="x:String" Name="jobTitle" />
+                    <Variable x:TypeArguments="x:String" Name="jobPay" />
+                    <Variable x:TypeArguments="ui:GenericValue" Name="companyName" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click On Job" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -192,7 +184,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="url" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                  <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="url" DisplayName="Get Job Application URL" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
                     <ui:GetAttribute.Result>
                       <OutArgument x:TypeArguments="x:String">[jobUrl]</OutArgument>
                     </ui:GetAttribute.Result>
@@ -207,7 +199,8 @@
                       </ui:Target>
                     </ui:GetAttribute.Target>
                   </ui:GetAttribute>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'H1'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                  <AddToCollection x:TypeArguments="x:String" Collection="[jobUrlList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[jobUrl]" />
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Job Title" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="28c5062558b3177179284e2d843fcf84" Selector="&lt;html app='chrome.exe' title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl id='vjs-container-iframe' tag='IFRAME' /&gt;&lt;webctrl tag='H1' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -219,10 +212,27 @@
                       </ui:Target>
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
-                      <OutArgument x:TypeArguments="ui:GenericValue">[jobTitle]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[jobTitle]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV  jobDetailsSection'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                  <AddToCollection x:TypeArguments="x:String" Collection="[jobTitleList]" DisplayName="Add To List of Job Titles" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="[jobTitle]" />
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Company Name" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
+                    <ui:GetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aa2940695e833bba24bff958ec78880f" Selector="&lt;html app='chrome.exe' title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl aaname=' Manpower' parentid='pj_19508cc61d24e9a1' tag='A' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:GetValue.Target>
+                    <ui:GetValue.Value>
+                      <OutArgument x:TypeArguments="ui:GenericValue">[companyName]</OutArgument>
+                    </ui:GetValue.Value>
+                  </ui:GetValue>
+                  <AddToCollection x:TypeArguments="x:String" Collection="[companyNameList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[companyName]" />
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Hourly/Salary" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="97e8b53970414184cc3874a84666890a" Selector="&lt;html app='chrome.exe' omit:title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl id='vjs-container-iframe' tag='IFRAME' /&gt;&lt;webctrl parentid='jobDetailsSection' tag='SPAN' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -234,41 +244,10 @@
                       </ui:Target>
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
-                      <OutArgument x:TypeArguments="ui:GenericValue">[jobPay]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[jobPay]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
-                    <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="238d354e3c9c586feb4ba67b31a95ba7" Selector="&lt;html app='chrome.exe' omit:title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl aaname='  ' idx='1' parentid='pj_cce3435b58f2fe24' tag='DIV' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:GetValue.Target>
-                    <ui:GetValue.Value>
-                      <OutArgument x:TypeArguments="ui:GenericValue">[wage]</OutArgument>
-                    </ui:GetValue.Value>
-                  </ui:GetValue>
-                  <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_5">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="s:String[]">[wageSplit]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="s:String[]">[wage.Split(CChar("a"))]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[wageSplit(counter)]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_7">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
-                    </Assign.Value>
-                  </Assign>
+                  <AddToCollection x:TypeArguments="x:String" Collection="[jobPayList]" DisplayName="Add To List of Job Pay" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[jobPay]" />
                 </Sequence>
               </If.Then>
             </If>
