@@ -74,7 +74,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="726.4,622.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[ziprecruiter.com]">
+      <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="726.4,622.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="ziprecruiter.com">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -145,23 +145,26 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="635.2,804.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[row(&quot;URL&quot;)]">
+              <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="635.2,804.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[row(&quot;URL&quot;).ToString]">
                 <ui:OpenBrowser.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                     </ActivityAction.Argument>
                     <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,704.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="variable1" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="560,612" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Keywords]">
+                      <ui:ForEach x:TypeArguments="s:String[]" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="560,612" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Keywords]">
                         <ui:ForEach.Body>
-                          <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction x:TypeArguments="s:String[]">
                             <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="x:Object" Name="word" />
+                              <DelegateInArgument x:TypeArguments="s:String[]" Name="word" />
                             </ActivityAction.Argument>
                             <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,477.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                               <Sequence.Variables>
@@ -172,7 +175,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'DIV  site-container'" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[wordFound]" Text="[word]">
+                              <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'DIV  site-container'" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[wordFound]" Text="[word.ToString]">
                                 <ui:TextExists.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aaeee32ddcdc61e2b50170638f5bad9c" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
                                     <ui:Target.TimeoutMS>
