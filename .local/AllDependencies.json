@@ -1648,9 +1648,10 @@
     "restore": {
       "projectUniqueName": "UiPathP2",
       "projectName": "UiPathP2",
-      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\.local",
-      "packagesPath": "C:\\Users\\kissi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\.local"
+      "projectPath": "B:\\Employment\\Revature\\Training\\UiPathP2\\.local",
+      "packagesPath": "C:\\Users\\SpikeSpiegel\\.nuget\\packages\\",
+      "outputPath": "B:\\Employment\\Revature\\Training\\UiPathP2\\.local"
+
     },
     "frameworks": {
       "net461": {
