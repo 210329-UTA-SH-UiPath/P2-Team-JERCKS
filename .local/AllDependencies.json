@@ -112,7 +112,7 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "IndeedLogin/1.0.9": {
+      "IndeedLogin/1.0.10": {
         "type": "package",
         "dependencies": {
           "UiPath.Excel.Activities": "2.7.2",
@@ -967,19 +967,28 @@
         "lib/netstandard2.0/Humanizer.xml"
       ]
     },
-    "IndeedLogin/1.0.9": {
-      "sha512": "rlTxXZxMjeTEjT141SmkwMItSJGIHgoM7J+SXeOmvunXvAeO5fvPy8l9FLtTEpurLu5w+KWIwhkcWmD6vAu00A==",
+    "IndeedLogin/1.0.10": {
+      "sha512": "85D7Ffvlwc3JlthIlMDHJgleW7ER8J7LdF9AuTjZ6dpkT+hgA9/nnXM4Vi2QNZZJD9+ETy62fTQFDrOHWicLeg==",
       "type": "package",
-      "path": "indeedlogin/1.0.9",
+      "path": "indeedlogin/1.0.10",
       "files": [
         ".nupkg.metadata",
-        "indeedlogin.1.0.9.nupkg.sha512",
+        "indeedlogin.1.0.10.nupkg.sha512",
         "indeedlogin.nuspec",
         "lib/net45/.settings/Release/settings-1a5b880a.json",
         "lib/net45/.settings/Release/settings-5190454b.json",
         "lib/net45/.settings/Release/settings-590bb27b.json",
         "lib/net45/.settings/Release/settings-9e9290da.json",
         "lib/net45/IndeedLogin.dll",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.1.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.2.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.3.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.4.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.5.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.6.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.7.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.8.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.9.nupkg",
         "lib/net45/project.json"
       ]
     },
@@ -1625,7 +1634,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "IndeedLogin >= 1.0.9 <= 1.0.9",
+      "IndeedLogin >= 1.0.10 <= 1.0.10",
       "UiPath.Excel.Activities >= 2.7.2 <= 2.7.2",
       "UiPath.Mail.Activities >= 1.7.2 <= 1.7.2",
       "UiPath.System.Activities >= 19.10.1 <= 19.10.1",
@@ -1649,7 +1658,7 @@
           "IndeedLogin": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.9, 1.0.9]"
+            "version": "[1.0.10, 1.0.10]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
@@ -1674,5 +1683,31 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "The folder 'C:\\Users\\kissi\\Revature\\UiPathP2\\indeedlogin\\.local' contains an invalid version."
+    },
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "The folder 'C:\\Users\\kissi\\Revature\\UiPathP2\\indeedlogin\\.screenshots' contains an invalid version."
+    },
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "The folder 'C:\\Users\\kissi\\Revature\\UiPathP2\\indeedlogin\\.settings' contains an invalid version."
+    },
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "The folder 'C:\\Users\\kissi\\Revature\\UiPathP2\\indeedlogin\\PackageVersions' contains an invalid version."
+    }
+  ]
 }
