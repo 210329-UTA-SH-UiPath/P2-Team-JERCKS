@@ -1598,15 +1598,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kirby\\.nuget\\packages\\": {}
+    "C:\\Users\\kissi\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "IndeedLogin",
       "projectName": "IndeedLogin",
-      "projectPath": "C:\\Users\\kirby\\revature\\UiPathP2\\IndeedLogin\\.local",
-      "packagesPath": "C:\\Users\\kirby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kirby\\revature\\UiPathP2\\IndeedLogin\\.local"
+      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\IndeedLogin\\.local",
+      "packagesPath": "C:\\Users\\kissi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\IndeedLogin\\.local"
     },
     "frameworks": {
       "net461": {

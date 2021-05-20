@@ -112,7 +112,7 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "IndeedLogin/1.0.13": {
+      "IndeedLogin/1.0.15": {
         "type": "package",
         "dependencies": {
           "UiPath.Excel.Activities": "2.7.2",
@@ -967,20 +967,31 @@
         "lib/netstandard2.0/Humanizer.xml"
       ]
     },
-    "IndeedLogin/1.0.13": {
-      "sha512": "FwNmuQwWrir/aBkEiWeAGDxJHBZidei5HvXgDMZdTonLX+98Udl72U6UB4e5EJYMLdzMpR5n2tXBgzKFoPTexA==",
+    "IndeedLogin/1.0.15": {
+      "sha512": "w6XSMSTrgbMhdi7zgoCXoyq2rAVTTMEU68fKg3P8nFdZGl/SkHW2n0j2J4gL5opnRQX9TBoBNp4pc08P8+FpPA==",
       "type": "package",
-      "path": "indeedlogin/1.0.13",
+      "path": "indeedlogin/1.0.15",
       "files": [
         ".nupkg.metadata",
-        "indeedlogin.1.0.13.nupkg.sha512",
+        "indeedlogin.1.0.15.nupkg.sha512",
         "indeedlogin.nuspec",
         "lib/net45/.settings/Release/settings-1a5b880a.json",
         "lib/net45/.settings/Release/settings-5190454b.json",
         "lib/net45/.settings/Release/settings-590bb27b.json",
         "lib/net45/.settings/Release/settings-9e9290da.json",
         "lib/net45/IndeedLogin.dll",
-        "lib/net45/PackageVersions/IndeedLogin.1.0.12.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.1.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.10.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.11.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.14.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.2.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.3.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.4.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.5.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.6.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.7.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.8.nupkg",
+        "lib/net45/PackageVersions/IndeedLogin.1.0.9.nupkg",
         "lib/net45/project.json"
       ]
     },
@@ -1626,7 +1637,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "IndeedLogin >= 1.0.13 <= 1.0.13",
+      "IndeedLogin >= 1.0.15 <= 1.0.15",
       "UiPath.Excel.Activities >= 2.7.2 <= 2.7.2",
       "UiPath.Mail.Activities >= 1.7.2 <= 1.7.2",
       "UiPath.System.Activities >= 19.10.1 <= 19.10.1",
@@ -1634,15 +1645,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kirby\\.nuget\\packages\\": {}
+    "C:\\Users\\kissi\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "UiPathP2",
       "projectName": "UiPathP2",
-      "projectPath": "C:\\Users\\kirby\\revature\\UiPathP2\\.local",
-      "packagesPath": "C:\\Users\\kirby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kirby\\revature\\UiPathP2\\.local"
+      "projectPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\.local",
+      "packagesPath": "C:\\Users\\kissi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kissi\\Revature\\UiPathP2\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1650,7 +1661,7 @@
           "IndeedLogin": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.13, 1.0.13]"
+            "version": "[1.0.15, 1.0.15]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
