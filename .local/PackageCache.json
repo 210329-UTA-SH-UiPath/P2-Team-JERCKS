@@ -108,7 +108,7 @@
     {
       "Package": {
         "Id": "IndeedLogin",
-        "Version": "1.0.12"
+        "Version": "1.0.13"
       },
       "Assemblies": [
         "C:\\Users\\kirby\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
@@ -123,7 +123,7 @@
         "C:\\Users\\kirby\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
         "C:\\Users\\kirby\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
         "C:\\Users\\kirby\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
-        "C:\\Users\\kirby\\.nuget\\packages\\indeedlogin/1.0.12\\lib/net45/IndeedLogin.dll",
+        "C:\\Users\\kirby\\.nuget\\packages\\indeedlogin/1.0.13\\lib/net45/IndeedLogin.dll",
         "C:\\Users\\kirby\\.nuget\\packages\\interop.domino.dll/1.0.0\\lib/Interop.Domino.dll",
         "C:\\Users\\kirby\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
         "C:\\Users\\kirby\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
@@ -230,7 +230,7 @@
     },
     "IndeedLogin": {
       "Id": "IndeedLogin",
-      "Version": "1.0.12",
+      "Version": "1.0.13",
       "Dependencies": [
         {
           "Item1": "UiPath.Excel.Activities",
