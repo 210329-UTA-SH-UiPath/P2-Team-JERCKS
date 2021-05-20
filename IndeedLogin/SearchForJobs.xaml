@@ -1,18 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SearchForJobs" this:SearchForJobs.keywords="engineer" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchForJobs" this:SearchForJobs.keywords="engineer" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="keywords" Type="InArgument(x:String)" />
-    <x:Property Name="companyNameList" Type="OutArgument(scg:List(x:String))" />
-    <x:Property Name="jobPayList" Type="OutArgument(scg:List(x:String))" />
-    <x:Property Name="jobUrlList" Type="OutArgument(scg:List(x:String))" />
-    <x:Property Name="jobTitleList" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="jobsDT" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>788,2864.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>788,2431.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SearchForJobs_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="23">
+    <scg:List x:TypeArguments="x:String" Capacity="24">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +33,11 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>UiPath.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -61,11 +59,11 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchForJobs" sap:VirtualizedContainerService.HintSize="768,2764.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SearchForJobs" sap:VirtualizedContainerService.HintSize="768,2331.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="skills" />
       <Variable x:TypeArguments="ui:GenericValue" Name="jobInfo" />
-      <Variable x:TypeArguments="sd:Rectangle" Name="position" />
+      <Variable x:TypeArguments="sd1:Rectangle" Name="position" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="jobs" />
       <Variable x:TypeArguments="x:Boolean" Name="homeSearchButton" />
     </Sequence.Variables>
@@ -74,38 +72,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="726,62" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="scg:List(x:String)">[jobTitleList]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[new List(of string)]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="726,62" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="scg:List(x:String)">[companyNameList]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[new List(of string)]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="726,62" sap2010:WorkflowViewState.IdRef="Assign_3">
-      <Assign.To>
-        <OutArgument x:TypeArguments="scg:List(x:String)">[jobPayList]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[new List(of string)]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="726,62" sap2010:WorkflowViewState.IdRef="Assign_4">
-      <Assign.To>
-        <OutArgument x:TypeArguments="scg:List(x:String)">[jobUrlList]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[new List(of string)]</InArgument>
-      </Assign.Value>
-    </Assign>
+    <ui:BuildDataTable DataTable="[jobsDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="726,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Origin&quot; default=&quot;Indeed&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;JobTitle&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Company&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Pay&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;url&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
     <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,226" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
@@ -181,13 +148,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FindChildren>
-    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="726,1706.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[jobs]">
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="726,1582.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[jobs]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:UiElement">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Check for wage displayed in Listing" sap:VirtualizedContainerService.HintSize="564,1568" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Check for wage displayed in Listing" sap:VirtualizedContainerService.HintSize="564,1444" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:GenericValue" Name="ResultData" />
             </Sequence.Variables>
@@ -211,14 +178,15 @@
                 </ui:Target>
               </ui:GetAttribute.Target>
             </ui:GetAttribute>
-            <If Condition="[ResultData.Contains(&quot;an hour&quot;) or ResultData.Contains(&quot;a year&quot;)]" sap:VirtualizedContainerService.HintSize="522,1340" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[ResultData.Contains(&quot;an hour&quot;) or ResultData.Contains(&quot;a year&quot;)]" sap:VirtualizedContainerService.HintSize="522,1216" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,1186" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,1062" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="jobUrl" />
                     <Variable x:TypeArguments="x:String" Name="jobTitle" />
                     <Variable x:TypeArguments="x:String" Name="jobPay" />
                     <Variable x:TypeArguments="x:String" Name="companyName" />
+                    <Variable x:TypeArguments="x:String" Name="textDT" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -262,7 +230,6 @@
                       </ui:Target>
                     </ui:GetAttribute.Target>
                   </ui:GetAttribute>
-                  <AddToCollection x:TypeArguments="x:String" Collection="[jobUrlList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[jobUrl]" />
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Job Title" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="28c5062558b3177179284e2d843fcf84" Selector="&lt;html app='chrome.exe' omit:title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl id='vjs-container-iframe' tag='IFRAME' /&gt;&lt;webctrl tag='H1' /&gt;">
@@ -278,7 +245,6 @@
                       <OutArgument x:TypeArguments="x:String">[jobTitle]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <AddToCollection x:TypeArguments="x:String" Collection="[jobTitleList]" DisplayName="Add To List of Job Titles" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="[jobTitle]" />
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Company Name" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ba00bfff623d8cffcf47b649dbf88ea0" Selector="&lt;html app='chrome.exe' omit:title='Engineer Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl id='vjs-container-iframe' tag='IFRAME' idx='1' /&gt;&lt;webctrl idx='50' /&gt;">
@@ -310,7 +276,6 @@
                       <InArgument x:TypeArguments="x:String">[companyName.Replace( "reviews", String.Empty)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <AddToCollection x:TypeArguments="x:String" Collection="[companyNameList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[companyName]" />
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Hourly/Salary" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="97e8b53970414184cc3874a84666890a" Selector="&lt;html app='chrome.exe' omit:title='Jobs, Employment in McAllen, TX | Indeed.com' /&gt;&lt;webctrl id='vjs-container-iframe' tag='IFRAME' /&gt;&lt;webctrl parentid='jobDetailsSection' tag='SPAN' /&gt;">
@@ -326,7 +291,8 @@
                       <OutArgument x:TypeArguments="x:String">[jobPay]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <AddToCollection x:TypeArguments="x:String" Collection="[jobPayList]" DisplayName="Add To List of Job Pay" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[jobPay]" />
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Indeed&quot;, jobTitle, companyName, jobPay, jobUrl}]" DataTable="[jobsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  <ui:OutputDataTable DataTable="[jobsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[textDT]" />
                 </Sequence>
               </If.Then>
             </If>
