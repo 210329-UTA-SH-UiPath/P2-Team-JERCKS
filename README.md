@@ -35,4 +35,4 @@ Eduardo Reyes, Kirby Chan, Joe Stalnaker
 
 ## Flow Chart
 
-![Flow Chart Diagram](./EduardoFlowChart.png)
+![Flow Chart Diagram](https://raw.githubusercontent.com/210329-UTA-SH-UiPath/training-code/main/P2%20Proposals/EduardoFlowChart.png)
