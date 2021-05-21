@@ -22,24 +22,6 @@
     },
     {
       "Package": {
-        "Id": "UiPath.Mail.Activities",
-        "Version": "1.7.2"
-      },
-      "Assemblies": [
-        "C:\\Users\\kissi\\.nuget\\packages\\bouncycastle/1.8.5\\lib/BouncyCastle.Crypto.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\interop.domino.dll/1.0.0\\lib/Interop.Domino.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/MailKit.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/MimeKit.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/UiPath.Mail.Activities.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/UiPath.Mail.dll"
-      ]
-    },
-    {
-      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "19.10.1"
       },
@@ -108,11 +90,10 @@
     {
       "Package": {
         "Id": "IndeedLogin",
-        "Version": "1.0.15"
+        "Version": "1.0.19"
       },
       "Assemblies": [
         "C:\\Users\\kissi\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\bouncycastle/1.8.5\\lib/BouncyCastle.Crypto.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\closedxml/0.87.1\\lib/net40/ClosedXML.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
@@ -122,30 +103,42 @@
         "C:\\Users\\kissi\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.calendar.v3/1.43.0.1872\\lib/net45/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.core/1.43.0\\lib/net45/Google.Apis.Core.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.gmail.v1/1.43.0.1859\\lib/net45/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.peopleservice.v1/1.43.0.1876\\lib/net45/Google.Apis.PeopleService.v1.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\indeedlogin/1.0.15\\lib/net45/IndeedLogin.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\interop.domino.dll/1.0.0\\lib/Interop.Domino.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\indeedlogin/1.0.19\\lib/net45/IndeedLogin.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\mailkit/2.10.0\\lib/net46/MailKit.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.extensions.filesystemglobbing/5.0.0\\lib/net461/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.identity.client/4.14.0\\lib/net45/Microsoft.Identity.Client.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.20\\lib/net461/Microsoft.Rest.ClientRuntime.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\microsoft.visualstudio.ole.interop/7.10.6071\\lib/Microsoft.VisualStudio.OLE.Interop.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\mimekit/2.10.0\\lib/net46/MimeKit.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\portable.bouncycastle/1.8.8\\lib/net40/BouncyCastle.Crypto.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\sharpziplib/1.0.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\system.buffers/4.5.1\\lib/net461/System.Buffers.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath/19.10.7452.28108\\lib/UiPath.Interop.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.excel.activities/2.7.2\\lib/net461/UiPath.Excel.Activities.Design.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.excel.activities/2.7.2\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.excel.activities/2.7.2\\lib/net461/UiPath.Excel.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/MailKit.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/MimeKit.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/UiPath.Mail.Activities.dll",
-        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.7.2\\lib/net461/UiPath.Mail.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.Activities.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.ocr.contracts/2.2.1\\lib/net45/UiPath.OCR.Contracts.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.system.activities/19.10.1\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.system.activities/19.10.1\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
@@ -184,6 +177,36 @@
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.vision/2.0.1\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\kissi\\.nuget\\packages\\uipath.vision/2.0.1\\lib/net452/UiPath.Vision.dll"
       ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.10.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.calendar.v3/1.43.0.1872\\lib/net45/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.core/1.43.0\\lib/net45/Google.Apis.Core.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.gmail.v1/1.43.0.1859\\lib/net45/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\google.apis.peopleservice.v1/1.43.0.1876\\lib/net45/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\mailkit/2.10.0\\lib/net46/MailKit.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.extensions.filesystemglobbing/5.0.0\\lib/net461/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\microsoft.identity.client/4.14.0\\lib/net45/Microsoft.Identity.Client.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\mimekit/2.10.0\\lib/net46/MimeKit.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\portable.bouncycastle/1.8.8\\lib/net40/BouncyCastle.Crypto.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\system.buffers/4.5.1\\lib/net461/System.Buffers.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.Activities.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\kissi\\.nuget\\packages\\uipath.mail.activities/1.10.4\\lib/net461/UiPath.Mail.dll"
+      ]
     }
   ],
   "Conflicts": [],
@@ -191,11 +214,6 @@
     "AvalonEdit": {
       "Id": "AvalonEdit",
       "Version": "5.0.3",
-      "Dependencies": []
-    },
-    "BouncyCastle": {
-      "Id": "BouncyCastle",
-      "Version": "1.8.5",
       "Dependencies": []
     },
     "ClosedXML": {
@@ -223,6 +241,86 @@
       "Version": "2.8.0",
       "Dependencies": []
     },
+    "Google.Apis": {
+      "Id": "Google.Apis",
+      "Version": "1.43.0",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis.Core",
+          "Item2": "[1.43.0, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[10.0.2, )"
+        }
+      ]
+    },
+    "Google.Apis.Auth": {
+      "Id": "Google.Apis.Auth",
+      "Version": "1.43.0",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis.Core",
+          "Item2": "[1.43.0, )"
+        },
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.43.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Calendar.v3": {
+      "Id": "Google.Apis.Calendar.v3",
+      "Version": "1.43.0.1872",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.43.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.43.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Core": {
+      "Id": "Google.Apis.Core",
+      "Version": "1.43.0",
+      "Dependencies": [
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[10.0.2, )"
+        }
+      ]
+    },
+    "Google.Apis.Gmail.v1": {
+      "Id": "Google.Apis.Gmail.v1",
+      "Version": "1.43.0.1859",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.43.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.43.0, )"
+        }
+      ]
+    },
+    "Google.Apis.PeopleService.v1": {
+      "Id": "Google.Apis.PeopleService.v1",
+      "Version": "1.43.0.1876",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.43.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.43.0, )"
+        }
+      ]
+    },
     "Humanizer.Core": {
       "Id": "Humanizer.Core",
       "Version": "2.4.2",
@@ -230,7 +328,7 @@
     },
     "IndeedLogin": {
       "Id": "IndeedLogin",
-      "Version": "1.0.15",
+      "Version": "1.0.19",
       "Dependencies": [
         {
           "Item1": "UiPath.Excel.Activities",
@@ -250,10 +348,15 @@
         }
       ]
     },
-    "interop.domino.dll": {
-      "Id": "interop.domino.dll",
-      "Version": "1.0.0",
-      "Dependencies": []
+    "MailKit": {
+      "Id": "MailKit",
+      "Version": "2.10.0",
+      "Dependencies": [
+        {
+          "Item1": "MimeKit",
+          "Item2": "[2.10.0, )"
+        }
+      ]
     },
     "Microsoft.AspNet.SignalR.Client": {
       "Id": "Microsoft.AspNet.SignalR.Client",
@@ -268,6 +371,16 @@
     "Microsoft.Exchange.WebServices": {
       "Id": "Microsoft.Exchange.WebServices",
       "Version": "2.2.0",
+      "Dependencies": []
+    },
+    "Microsoft.Extensions.FileSystemGlobbing": {
+      "Id": "Microsoft.Extensions.FileSystemGlobbing",
+      "Version": "5.0.0",
+      "Dependencies": []
+    },
+    "Microsoft.Identity.Client": {
+      "Id": "Microsoft.Identity.Client",
+      "Version": "4.14.0",
       "Dependencies": []
     },
     "Microsoft.Rest.ClientRuntime": {
@@ -285,6 +398,24 @@
       "Version": "7.10.6071",
       "Dependencies": []
     },
+    "MimeKit": {
+      "Id": "MimeKit",
+      "Version": "2.10.0",
+      "Dependencies": [
+        {
+          "Item1": "System.Data.DataSetExtensions",
+          "Item2": "[4.5.0, )"
+        },
+        {
+          "Item1": "System.Buffers",
+          "Item2": "[4.5.1, )"
+        },
+        {
+          "Item1": "Portable.BouncyCastle",
+          "Item2": "[1.8.8, )"
+        }
+      ]
+    },
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
       "Version": "11.0.2",
@@ -300,9 +431,24 @@
         }
       ]
     },
+    "Portable.BouncyCastle": {
+      "Id": "Portable.BouncyCastle",
+      "Version": "1.8.8",
+      "Dependencies": []
+    },
     "SharpZipLib": {
       "Id": "SharpZipLib",
       "Version": "1.0.0",
+      "Dependencies": []
+    },
+    "System.Buffers": {
+      "Id": "System.Buffers",
+      "Version": "4.5.1",
+      "Dependencies": []
+    },
+    "System.Data.DataSetExtensions": {
+      "Id": "System.Data.DataSetExtensions",
+      "Version": "4.5.0",
       "Dependencies": []
     },
     "System.ValueTuple": {
@@ -347,23 +493,43 @@
     },
     "UiPath.Mail.Activities": {
       "Id": "UiPath.Mail.Activities",
-      "Version": "1.7.2",
+      "Version": "1.10.4",
       "Dependencies": [
         {
-          "Item1": "System.ValueTuple",
-          "Item2": "[4.5.0, )"
+          "Item1": "Google.Apis.Calendar.v3",
+          "Item2": "[1.43.0.1872, )"
+        },
+        {
+          "Item1": "Google.Apis.Gmail.v1",
+          "Item2": "[1.43.0.1859, )"
+        },
+        {
+          "Item1": "Google.Apis.PeopleService.v1",
+          "Item2": "[1.43.0.1876, )"
+        },
+        {
+          "Item1": "MailKit",
+          "Item2": "[2.10.0, )"
         },
         {
           "Item1": "Microsoft.Exchange.WebServices",
           "Item2": "[2.2.0, )"
         },
         {
-          "Item1": "BouncyCastle",
-          "Item2": "[1.8.5, )"
+          "Item1": "Microsoft.Extensions.FileSystemGlobbing",
+          "Item2": "[5.0.0, )"
         },
         {
-          "Item1": "interop.domino.dll",
-          "Item2": "[1.0.0, )"
+          "Item1": "Microsoft.Identity.Client",
+          "Item2": "[4.14.0, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[11.0.1, )"
+        },
+        {
+          "Item1": "System.ValueTuple",
+          "Item2": "[4.5.0, )"
         }
       ]
     },
